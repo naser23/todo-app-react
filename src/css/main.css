@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: #d2d3db;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5%;
+}
+
+#root ::after {
+  content: "";
+  background-image: url(../images/bg-mobile-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 40%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: top;
+}
+
+#root .main {
+  width: 90%;
+  max-height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.5fr 0.25fr 2fr;
+      grid-template-rows: 0.5fr 0.25fr 2fr;
+}
+
+#root .main .header-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#root .main .header-area h1 {
+  letter-spacing: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+#root .main .header-area button {
+  background: none;
+  border: none;
+}
+
+#root .main .todo-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 2fr;
+      grid-template-columns: 0.5fr 2fr;
+  border-radius: 5px;
+  height: 3.5rem;
+}
+
+#root .main .todo-form button {
+  background: none;
+  border: none;
+}
+
+#root .main .todo-form input {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+}
+
+#root .main .todo-form input:focus {
+  outline: none;
+}
+
+#root .main .list-items-area {
+  margin-top: 7.5%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#root .main .list-items-area ul {
+  padding: 5px 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root .main .list-items-area ul .list-item {
+  height: 3.5rem;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.4fr 1fr 0.4fr;
+      grid-template-columns: 0.4fr 1fr 0.4fr;
+  border-bottom: 0.5px solid #d2d3db;
+  border-radius: 0px;
+}
+
+#root .main .list-items-area ul .list-item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+#root .main .list-items-area ul .list-item .button-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root .main .list-items-area ul .list-item .button-area button {
+  width: 60%;
+  height: 80%;
+  border-radius: 100px;
+  border: 0.5px solid gray;
+}
+
+#root .main .list-items-area ul .list-item .delete-button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#root .main .list-items-area ul .list-item button {
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=main.css.map */
