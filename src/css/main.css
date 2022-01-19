@@ -46,7 +46,7 @@ body {
   background-position: top;
 }
 
-#root .main {
+#root .container {
   width: 90%;
   max-height: auto;
   display: -ms-grid;
@@ -55,7 +55,7 @@ body {
       grid-template-rows: 0.5fr 0.25fr 2fr;
 }
 
-#root .main .header-area {
+#root .container .header-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +64,7 @@ body {
           justify-content: space-between;
 }
 
-#root .main .header-area h1 {
+#root .container .header-area h1 {
   letter-spacing: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,12 +75,12 @@ body {
   color: white;
 }
 
-#root .main .header-area button {
+#root .container .header-area button {
   background: none;
   border: none;
 }
 
-#root .main .todo-form {
+#root .container .todo-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.5fr 2fr;
@@ -89,34 +89,34 @@ body {
   height: 3.5rem;
 }
 
-#root .main .todo-form button {
+#root .container .todo-form button {
   background: none;
   border: none;
 }
 
-#root .main .todo-form input {
+#root .container .todo-form input {
   background: none;
   border: none;
   font-size: 0.9rem;
 }
 
-#root .main .todo-form input:focus {
+#root .container .todo-form input:focus {
   outline: none;
 }
 
-#root .main .list-items-area {
+#root .container .list-items-area {
   margin-top: 7.5%;
   border-radius: 5px;
   background-color: white;
 }
 
-#root .main .list-items-area ul {
+#root .container .list-items-area ul {
   padding: 5px 0;
   width: 100%;
   height: 100%;
 }
 
-#root .main .list-items-area ul .list-item {
+#root .container .list-items-area ul .list-item {
   height: 3.5rem;
   list-style-type: none;
   display: -ms-grid;
@@ -127,7 +127,7 @@ body {
   border-radius: 0px;
 }
 
-#root .main .list-items-area ul .list-item p {
+#root .container .list-items-area ul .list-item p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,12 +137,12 @@ body {
   padding-left: 10px;
 }
 
-#root .main .list-items-area ul .list-item .delete-button {
+#root .container .list-items-area ul .list-item .delete-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-#root .main .list-items-area ul .list-item button {
+#root .container .list-items-area ul .list-item button {
   border: none;
   outline: none;
   background-color: white;
@@ -172,5 +172,45 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 567.98px) {
+  #root ::after {
+    height: 45%;
+  }
+  #root .container {
+    width: 70%;
+  }
+  #root .container .header-area {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  #root ::after {
+    height: 35%;
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
+  #root .container .header-area {
+    margin-bottom: 0px;
+  }
+  #root .container .todo-form {
+    height: 4rem;
+  }
+  #root .container .list-items-area {
+    margin-top: 2%;
+  }
+  #root .container .list-items-area .list-item {
+    height: 4rem;
+  }
+}
+
+@media (min-width: 991.98px) {
+  #root ::after {
+    height: 40%;
+  }
+  #root .container {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

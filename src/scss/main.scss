@@ -1,4 +1,4 @@
-@import "./config.scss";
+@import "./_config.scss";
 
 * {
   margin: 0;
@@ -39,7 +39,7 @@ body {
     background-position: top;
   }
 
-  .main {
+  .container {
     width: 90%;
     max-height: auto;
     display: grid;
@@ -142,3 +142,5 @@ body {
     }
   }
 }
+
+@import "./_queries.scss";

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,MAAM,EAAE,SAAS,EAAE,QAAQ;EACzB,AACE,KADG,CACH,OAAO,CAAC;IACN,MAAM,EAAE,GAAG;GACZ;EAHH,AAIE,KAJG,CAIH,UAAU,CAAC;IACT,KAAK,EAAE,GAAG;GAKX;EAVH,AAOI,KAPC,CAIH,UAAU,CAGR,YAAY,CAAC;IACX,aAAa,EAAE,IAAI;GACpB;;;AAKP,MAAM,EAAE,SAAS,EAAE,QAAQ;EACzB,AACE,KADG,CACH,OAAO,CAAC;IACN,MAAM,EAAE,GAAG;GACZ",
+    "sources": [
+        "../scss/queries.scss",
+        "../scss/config.scss"
+    ],
+    "names": [],
+    "file": "queries.css"
+}

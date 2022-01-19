@@ -1,0 +1,18 @@
+@media (min-width: 567.98px) {
+  #root ::after {
+    height: 45%;
+  }
+  #root .container {
+    width: 70%;
+  }
+  #root .container .header-area {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .root ::after {
+    height: 35%;
+  }
+}
+/*# sourceMappingURL=queries.css.map */

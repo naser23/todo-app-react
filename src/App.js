@@ -40,11 +40,11 @@ function App() {
   }
 
   return (
-    <div className="main">
+    <main className="container">
       <Header />
       <InputForm handleAdd={addTodo} />
       <TodoItemList beginningTodos={todos} handleDelete={deleteTodo} />
-    </div>
+    </main>
   );
 }
 
