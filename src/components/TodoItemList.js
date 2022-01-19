@@ -1,6 +1,6 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import CheckButton from "./CheckButton";
+
 import { v4 as uuidv4 } from "uuid";
 
 function TodoItemList({ beginningTodos, handleDelete }) {

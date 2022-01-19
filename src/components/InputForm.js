@@ -16,7 +16,7 @@ function InputForm({ handleAdd }) {
 
   return (
     <form className="todo-form card" onSubmit={handleSubmit}>
-      <button>Check</button>
+      <span className="checkbox" type="checkbox"></span>
       <input
         type="text"
         placeholder="Create a new todo..."
