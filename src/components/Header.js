@@ -1,12 +1,11 @@
 import React from "react";
-import moonLogo from "../images/icon-moon.svg";
 
-function Header() {
+function Header({ changeTheme, Icon }) {
   return (
     <div className="header-area">
       <h1>TODO</h1>
-      <button>
-        <img src={moonLogo} alt="moon-icon"></img>
+      <button onClick={changeTheme}>
+        <img src={Icon} alt="theme-icon"></img>
       </button>
     </div>
   );

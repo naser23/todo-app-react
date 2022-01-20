@@ -15,7 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
-  background-color: #fafafa;
+  background-color: #d2d3db;
 }
 
 #root {
@@ -37,7 +37,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  background-color: black;
   width: 100%;
   height: 40%;
   top: 0;
@@ -47,12 +46,18 @@ body {
 }
 
 #root .container {
-  width: 90%;
+  width: 100%;
   max-height: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 0.5fr 0.25fr 2fr;
-      grid-template-rows: 0.5fr 0.25fr 2fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #root .container .header-area {
@@ -62,6 +67,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 10%;
+  margin-bottom: 1.5rem;
+  width: 90%;
 }
 
 #root .container .header-area h1 {
@@ -87,6 +95,8 @@ body {
       grid-template-columns: 0.5fr 2fr;
   border-radius: 5px;
   height: 3.5rem;
+  padding: 0 0.5rem;
+  width: 90%;
 }
 
 #root .container .todo-form button {
@@ -108,23 +118,26 @@ body {
   margin-top: 7.5%;
   border-radius: 5px;
   background-color: white;
+  border-radius: 5px;
+  width: 90%;
 }
 
 #root .container .list-items-area ul {
-  padding: 5px 0;
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 
 #root .container .list-items-area ul .list-item {
   height: 3.5rem;
-  list-style-type: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.4fr 1fr 0.4fr;
       grid-template-columns: 0.4fr 1fr 0.4fr;
   border-bottom: 0.5px solid #d2d3db;
   border-radius: 0px;
+  padding: 0 0.5rem;
+  border-radius: 5px;
 }
 
 #root .container .list-items-area ul .list-item p {
@@ -195,10 +208,11 @@ body {
     margin-bottom: 0px;
   }
   #root .container .todo-form {
+    margin-top: 5%;
     height: 4rem;
   }
   #root .container .list-items-area {
-    margin-top: 2%;
+    margin-top: 10%;
   }
   #root .container .list-items-area .list-item {
     height: 4rem;

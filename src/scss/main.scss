@@ -16,7 +16,7 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Josefin Sans", sans-serif;
-  background-color: $very-light-gray;
+  background-color: hsl(233, 11%, 84%);
 }
 
 #root {
@@ -30,7 +30,7 @@ body {
     content: "";
     @include background($light-mobile-background);
     position: absolute;
-    background-color: black;
+
     width: 100%;
     height: 40%;
     top: 0;
@@ -40,14 +40,19 @@ body {
   }
 
   .container {
-    width: 90%;
+    width: 100%;
     max-height: auto;
-    display: grid;
-    grid-template-rows: 0.5fr 0.25fr 2fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // grid-template-rows: 0.5fr 0.25fr 2fr;
 
     .header-area {
       display: flex;
       justify-content: space-between;
+      height: 10%;
+      margin-bottom: 1.5rem;
+      width: 90%;
 
       h1 {
         letter-spacing: 1rem;
@@ -67,6 +72,8 @@ body {
       grid-template-columns: 0.5fr 2fr;
       border-radius: 5px;
       height: 3.5rem;
+      padding: 0 0.5rem;
+      width: 90%;
 
       button {
         background: none;
@@ -87,21 +94,23 @@ body {
     .list-items-area {
       margin-top: 7.5%;
       border-radius: 5px;
-      // border: 1px solid black;
       background-color: white;
+      border-radius: 5px;
+      width: 90%;
 
       ul {
-        padding: 5px 0;
         width: 100%;
         height: 100%;
+        border-radius: 5px;
 
         .list-item {
           height: 3.5rem;
-          list-style-type: none;
           display: grid;
           grid-template-columns: 0.4fr 1fr 0.4fr;
           border-bottom: 0.5px solid $light-grayish-blue;
           border-radius: 0px;
+          padding: 0 0.5rem;
+          border-radius: 5px;
 
           p {
             display: flex;
