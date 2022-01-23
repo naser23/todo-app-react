@@ -1,12 +1,16 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-
+import { StateTest } from "./StateTest";
 import { useState } from "react";
 import CheckIcon from "../images/icon-check.svg";
 
-function TodoItem({ item, handleDelete }) {
+function TodoItem({ item, handleDelete, card }) {
   const listId = uuidv4();
 
+  const toggledTheme =
+    localStorage.getItem("theme") || localStorage.setItem("theme", "day");
+
+  const [theme, setTheme, changeTheme] = StateTest(toggledTheme);
   const completedStyle = {
     textDecoration: "line-through",
     color: "hsl(233, 11%, 84%)",

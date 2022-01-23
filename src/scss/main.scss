@@ -12,6 +12,12 @@
   border-radius: 5px;
 }
 
+.card-dark {
+  height: 100%;
+  background: $very-dark-desaturated-blue;
+  border-radius: 5px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -24,20 +30,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
-
-  ::after {
-    content: "";
-    @include background($light-mobile-background);
-    position: absolute;
-
-    width: 100%;
-    height: 40%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-position: top;
-  }
+  // padding-top: 5%;
 
   .container {
     width: 100%;
@@ -45,13 +38,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     // grid-template-rows: 0.5fr 0.25fr 2fr;
+
+    .hero-img {
+      // @include background($light-mobile-background);
+      position: absolute;
+      width: 100vw;
+      height: 40%;
+      z-index: -1;
+      background-position: top;
+    }
 
     .header-area {
       display: flex;
       justify-content: space-between;
-      height: 10%;
-      margin-bottom: 1.5rem;
+      margin-top: 15%;
+      margin-bottom: 1.75rem;
       width: 90%;
 
       h1 {

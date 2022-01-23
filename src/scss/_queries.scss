@@ -2,10 +2,10 @@
 
 @media (min-width: 567.98px) {
   #root {
-    ::after {
-      height: 45%;
-    }
     .container {
+      .hero-img {
+        height: 45%;
+      }
       width: 70%;
 
       .header-area {
@@ -17,11 +17,11 @@
 
 @media (min-width: 767.98px) {
   #root {
-    ::after {
-      height: 35%;
-      background-image: $light-desktop-background;
-    }
     .container {
+      .hero-img {
+        height: 30%;
+        // background-image: $light-desktop-background;
+      }
       .header-area {
         margin-bottom: 0px;
       }
@@ -44,11 +44,11 @@
 
 @media (min-width: 991.98px) {
   #root {
-    ::after {
-      height: 40%;
-    }
     .container {
-      width: 40%;
+      width: 50%;
+      .hero-img {
+        height: 40%;
+      }
     }
   }
 }
