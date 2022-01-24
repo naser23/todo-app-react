@@ -1,5 +1,6 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import FilterTodos from "./FilterTodos";
 
 function TodoItemList({ todos, handleDelete, color }) {
   return (
@@ -14,6 +15,7 @@ function TodoItemList({ todos, handleDelete, color }) {
           />
         ))}
       </ul>
+      <FilterTodos color={color} />
     </section>
   );
 }
