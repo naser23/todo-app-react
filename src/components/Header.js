@@ -1,10 +1,10 @@
 import React from "react";
 
-function Header({ src }) {
+function Header({ src, changeTheme }) {
   return (
     <div className="header-area">
       <h1>TODO</h1>
-      <button>
+      <button onClick={changeTheme}>
         <img src={src} alt="theme-icon" />
       </button>
     </div>

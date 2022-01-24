@@ -2,7 +2,7 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import { useState } from "react";
 
-function InputForm({ handleAdd }) {
+function InputForm({ handleAdd, color }) {
   const [text, setText] = useState("");
 
   function onSubmit(e) {
@@ -16,7 +16,7 @@ function InputForm({ handleAdd }) {
   }
 
   return (
-    <form className="todo-form card" onSubmit={onSubmit}>
+    <form className={`todo-form card ${color}`} onSubmit={onSubmit}>
       <span className="checkbox" type="checkbox"></span>
       <input
         type="text"

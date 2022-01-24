@@ -13,6 +13,7 @@
 
 .card.dark {
   background: #25273c;
+  color: #d2d3db;
 }
 
 body {
@@ -111,6 +112,10 @@ body {
   outline: none;
 }
 
+#root .container .todo-form.dark input {
+  color: #cacde8;
+}
+
 #root .container .list-items-area {
   margin-top: 7.5%;
   border-radius: 5px;
@@ -131,7 +136,7 @@ body {
   display: grid;
   -ms-grid-columns: 0.4fr 1fr 0.2fr;
       grid-template-columns: 0.4fr 1fr 0.2fr;
-  border-bottom: 0.5px solid #d2d3db;
+  border-bottom: 0.25px solid #d2d3db;
   border-radius: 0px;
 }
 
@@ -167,7 +172,7 @@ body {
 }
 
 #root .list-items-area.dark {
-  background: #25273c;
+  background-color: #25273c;
 }
 
 #root .checkbox {
