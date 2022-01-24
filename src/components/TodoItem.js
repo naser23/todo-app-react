@@ -1,56 +1,14 @@
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
-import { StateTest } from "./StateTest";
-import { useState } from "react";
 import CheckIcon from "../images/icon-check.svg";
 
-function TodoItem({ item, handleDelete, card }) {
-  const listId = uuidv4();
-
-  const toggledTheme =
-    localStorage.getItem("theme") || localStorage.setItem("theme", "day");
-
-  const [theme, setTheme, changeTheme] = StateTest(toggledTheme);
-  const completedStyle = {
-    textDecoration: "line-through",
-    color: "hsl(233, 11%, 84%)",
-  };
-
-  const checkBackground = {
-    backgroundImage: "linear-gradient(hsl(192, 100%, 67%), rgb(192, 88, 243))",
-  };
-
-  const [isCompleted, setIsCompleted] = useState(false);
-
-  function toggleComplete() {
-    setIsCompleted(!isCompleted);
-  }
-
+function TodoItem({ todo, handleDelete }) {
   return (
     <li className="list-item card">
-      {isCompleted ? (
-        <>
-          <span
-            className="checkbox"
-            type="checkbox"
-            onClick={toggleComplete}
-            style={checkBackground}
-          >
-            <img className="check-icon" src={CheckIcon} alt="check-icon" />
-          </span>
-          <p style={completedStyle}>{item.text}</p>
-        </>
-      ) : (
-        <>
-          <span
-            className="checkbox"
-            type="checkbox"
-            onClick={toggleComplete}
-          ></span>
-          <p>{item.text}</p>
-        </>
-      )}
-      <button className="delete-button" onClick={() => handleDelete(item.id)}>
+      <span className="checkbox" type="checkbox">
+        <img className="check-icon" src={CheckIcon} alt="" />
+      </span>
+      <p>{todo.text}</p>
+      <button className="delete-button" onClick={() => handleDelete(todo.id)}>
         X
       </button>
     </li>

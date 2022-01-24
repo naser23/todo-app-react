@@ -11,10 +11,8 @@
   border-radius: 5px;
 }
 
-.card-dark {
-  height: 100%;
+.card.dark {
   background: #25273c;
-  border-radius: 5px;
 }
 
 body {
@@ -90,8 +88,8 @@ body {
 #root .container .todo-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 2fr;
-      grid-template-columns: 0.5fr 2fr;
+  -ms-grid-columns: 0.6fr 2fr;
+      grid-template-columns: 0.6fr 2fr;
   border-radius: 5px;
   height: 3.5rem;
   padding: 0 0.5rem;
@@ -131,12 +129,10 @@ body {
   height: 3.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.4fr 1fr 0.4fr;
-      grid-template-columns: 0.4fr 1fr 0.4fr;
+  -ms-grid-columns: 0.4fr 1fr 0.2fr;
+      grid-template-columns: 0.4fr 1fr 0.2fr;
   border-bottom: 0.5px solid #d2d3db;
   border-radius: 0px;
-  padding: 0 0.5rem;
-  border-radius: 5px;
 }
 
 #root .container .list-items-area ul .list-item p {
@@ -154,11 +150,24 @@ body {
   border-bottom-right-radius: 5px;
 }
 
+#root .container .list-items-area ul .list-item .delete-button.dark {
+  background: #25273c;
+}
+
 #root .container .list-items-area ul .list-item button {
   border: none;
   outline: none;
   background-color: white;
   font-size: 1rem;
+}
+
+#root .container .list-items-area ul .list-item.dark {
+  background: #25273c;
+  border-bottom: 0.5px solid #9394a5;
+}
+
+#root .list-items-area.dark {
+  background: #25273c;
 }
 
 #root .checkbox {

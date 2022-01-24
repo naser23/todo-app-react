@@ -12,10 +12,8 @@
   border-radius: 5px;
 }
 
-.card-dark {
-  height: 100%;
+.card.dark {
   background: $very-dark-desaturated-blue;
-  border-radius: 5px;
 }
 
 body {
@@ -72,7 +70,7 @@ body {
 
     .todo-form {
       display: grid;
-      grid-template-columns: 0.5fr 2fr;
+      grid-template-columns: 0.6fr 2fr;
       border-radius: 5px;
       height: 3.5rem;
       padding: 0 0.5rem;
@@ -109,11 +107,11 @@ body {
         .list-item {
           height: 3.5rem;
           display: grid;
-          grid-template-columns: 0.4fr 1fr 0.4fr;
+          grid-template-columns: 0.4fr 1fr 0.2fr;
           border-bottom: 0.5px solid $light-grayish-blue;
           border-radius: 0px;
-          padding: 0 0.5rem;
-          border-radius: 5px;
+          // padding: 0 0.5rem;
+          // border-radius: 5px;
 
           p {
             display: flex;
@@ -125,6 +123,10 @@ body {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
           }
+
+          .delete-button.dark {
+            background: $very-dark-desaturated-blue;
+          }
           button {
             border: none;
             outline: none;
@@ -132,8 +134,17 @@ body {
             font-size: 1rem;
           }
         }
+
+        .list-item.dark {
+          background: $very-dark-desaturated-blue;
+          border-bottom: 0.5px solid $dark-grayish-blue;
+        }
       }
     }
+  }
+
+  .list-items-area.dark {
+    background: $very-dark-desaturated-blue;
   }
   .checkbox {
     width: 2rem;

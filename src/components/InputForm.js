@@ -1,26 +1,27 @@
 import React from "react";
+import TodoItem from "./TodoItem";
 import { useState } from "react";
 
 function InputForm({ handleAdd }) {
   const [text, setText] = useState("");
 
-  function handleChange(e) {
-    setText(e.currentTarget.value);
-  }
-
-  function handleSubmit(e) {
+  function onSubmit(e) {
     e.preventDefault();
     handleAdd(text);
     setText("");
   }
 
+  function updateText(e) {
+    setText(e.currentTarget.value);
+  }
+
   return (
-    <form className="todo-form card" onSubmit={handleSubmit}>
+    <form className="todo-form card" onSubmit={onSubmit}>
       <span className="checkbox" type="checkbox"></span>
       <input
         type="text"
         placeholder="Create a new todo..."
-        onChange={handleChange}
+        onChange={updateText}
         value={text}
       />
     </form>
