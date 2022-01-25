@@ -154,7 +154,9 @@ body {
       .filtered-todos {
         display: flex;
         justify-content: space-between;
-        padding: 0px 5%;
+        width: 80%;
+        margin: 0 auto;
+
         align-items: center;
         height: 3.5rem;
       }
