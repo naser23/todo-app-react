@@ -1,6 +1,15 @@
 import React from "react";
+import SunIcon from "../images/icon-sun.svg";
+import MoonIcon from "../images/icon-moon.svg";
+import TodoContext from "../context/TodoContext";
+import { useContext } from "react";
 
-function Header({ src, changeTheme }) {
+function Header() {
+  const { theme, changeTheme } = useContext(TodoContext);
+  let src;
+
+  theme === "day" ? (src = MoonIcon) : (src = SunIcon);
+
   return (
     <div className="header-area">
       <h1>TODO</h1>

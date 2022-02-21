@@ -1,13 +1,19 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 import { useState } from "react";
+import TodoContext from "../context/TodoContext";
+import { useContext } from "react";
 
-function InputForm({ handleAdd, color }) {
+function InputForm() {
+  const { theme, addTodo } = useContext(TodoContext);
   const [text, setText] = useState("");
+  let color;
+
+  theme === "day" ? (color = "") : (color = "dark");
 
   function onSubmit(e) {
     e.preventDefault();
-    handleAdd(text);
+    addTodo(text);
     setText("");
   }
 

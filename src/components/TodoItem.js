@@ -1,9 +1,14 @@
 import React from "react";
 import CheckIcon from "../images/icon-check.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import TodoContext from "../context/TodoContext";
 
-function TodoItem({ todo, handleDelete, color }) {
+function TodoItem({ todo }) {
+  const { theme, deleteTodo } = useContext(TodoContext);
   const [isComplete, setIsComplete] = useState(false);
+  let color;
+
+  theme === "day" ? (color = "") : (color = "dark");
 
   const completedStyle = {
     textDecoration: "line-through",
@@ -35,7 +40,7 @@ function TodoItem({ todo, handleDelete, color }) {
           </p>
           <button
             className={`delete-button ${color}`}
-            onClick={() => handleDelete(todo.id)}
+            onClick={() => deleteTodo(todo.id)}
           >
             X
           </button>
@@ -50,7 +55,7 @@ function TodoItem({ todo, handleDelete, color }) {
           <p className={`${color}`}>{todo.text}</p>
           <button
             className={`delete-button ${color}`}
-            onClick={() => handleDelete(todo.id)}
+            onClick={() => deleteTodo(todo.id)}
           >
             X
           </button>
